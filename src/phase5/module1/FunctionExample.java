@@ -11,5 +11,8 @@ public class FunctionExample {
 
         Function<String,Boolean> checkStartWith = n -> n.startsWith("Y");
         System.out.println(names.apply("Yakesh Kumar"));
+
+        Function<String,String> convertUpperCase = n -> n.toUpperCase();
+        System.out.println(convertUpperCase.apply("Yakesh Kumar"));
     }
 }
