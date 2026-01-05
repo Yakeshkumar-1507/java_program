@@ -59,17 +59,22 @@ class StudentService {
     }
 
     public void showTopper() {
-        if (students.isEmpty()) {
-            System.out.println("Student list is empty!");
-            return;
-        }
-        Student topper = students.get(0);
-        for (Student s : students) {
-            if (s.marks > topper.marks) {
-                topper = s;
+        try {
+            if (students.isEmpty()) {
+                System.out.println("Student list is empty!");
+                return;
             }
+            Student topper = students.get(0);
+            for (Student s : students) {
+                if (s.marks > topper.marks) {
+                    topper = s;
+                }
+            }
+            System.out.println("Student topper is " + topper);
         }
-        System.out.println("Student topper is " + topper);
+        catch (IndexOutOfBoundsException e) {
+            System.out.println("Student list is empty!");
+        }
     }
 }
 
