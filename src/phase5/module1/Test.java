@@ -14,26 +14,8 @@ public class Test {
 
     public static void main(String[] args) {
 
-        int a = 10;
-        System.out.println(a);
-
-        try {
-            int b = 20 / 0;
-            System.out.println(b);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            System.out.println("Exception occured");
-        }
-
-
-        int c = 30;
-        System.out.println(c);
-
-        try {
-            FileInputStream fis = new FileInputStream("");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        int num =89;
+        char ch = (char) num;
+        System.out.println("Character is: " + ch);
     }
 }
